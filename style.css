@@ -1,0 +1,135 @@
+:root{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+*,::after,::before{
+    box-sizing: border-box;
+}
+@media(min-width: 1600px){
+    body{
+        background-size: cover;
+    }
+    .grid{
+        grid-auto-columns: minmax(0, 1fr)
+    }
+}
+@media(min-width: 1000px){
+    body{
+        background-image: url(./images/bg-desktop.svg);
+    }
+    .grid{
+        grid-auto-flow: column;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    button{
+        width: 10rem;
+    }
+    .socials{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .grid > img{
+        width: auto;
+    }
+}
+@media(max-width: 600px){
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+    .grid{
+        grid-auto-flow: row;
+        text-align: center;
+    }
+    .grid > img{
+        max-width: 100%;
+    }
+    header{
+        margin: 1rem 2rem;
+    }
+    .logo{
+        width: 50%;
+    }
+    h1{
+        font-size: 1.625rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .socials{
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .socials > a:first-child{
+        margin: 0;
+    }
+    button{
+        width: 15rem;
+    }
+}
+body{
+    background-color: var(--Violet);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    color:white;
+    
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    color: white;
+    opacity: 0.9;
+    
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    margin: 2.5rem 2.5rem 4rem;
+}
+.grid{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    gap: 3rem;
+}
+button{
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    color: var(--Violet);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    
+    border-style: none;
+    border-radius: 1.5rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+button:hover{
+    background-color: var(--SoftMagenta);
+    color: white;
+}
+.socials{
+    
+    padding: 2rem 4rem 0rem;
+}
+.social-button{
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+.social-button:hover{
+    color: var(--SoftMagenta);
+    border-color: var(--SoftMagenta);
+}
